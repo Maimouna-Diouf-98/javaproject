@@ -1,0 +1,73 @@
+fieldset{
+  border: 1px solid rgb(6, 6, 6);
+}
+ .tva{
+     margin-left: 15px;
+     margin-bottom: 5px;
+ }
+ #pro{
+     margin-left: 20px;
+     margin-bottom: 5px;
+     border-radius: 5px;
+     width: 100px;
+ }
+ #quantite{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+#prix_ht{
+    margin-left: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+#montant{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+#total_ttc{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+#effacer{
+    margin-left: 170px;
+ 
+}
+#demo{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 200px;
+    text-transform: uppercase;
+}
+table,th,td{
+    border: 4px solid black;
+   
+  
+}
+table{
+    
+margin: 70px  0px 0px 150px;
+  
+}
+td{
+    width: 40px;
+}
+#ligne{
+    margin-left: 24px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}
+#col{
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 200px;
+}

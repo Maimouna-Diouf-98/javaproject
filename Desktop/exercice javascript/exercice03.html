@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <form action="traitement.php">
+            <fieldset class="p-5">
+
+                <h2 class="text-uppercase text-center">facture</h2>
+                <label for="tva1">Taux TVA</label>
+                <input class="tva" type="radio" id="tva" name="cal" value="9" class="tva" >
+                <label for="tva">9%</label>
+                <input type="radio" id="tva2" name="cal" value="11" class="tva" >
+                <label for="tva2">11%</label>
+                <input type="radio" id="tva3" name="cal" value="19" class="tva" >
+                <label for="tva3">19%</label>
+                <br>
+                <label for="pro" class="text-capitalize">produits</label>
+                <select name="pro" id="pro"  >
+                    <option value="produit 01">produit 01</option>
+                    <option value="produit 02">produit 02</option>
+                    <option value="produit 03">produit 03</option>
+                </select>
+                <br>
+                <label for="quantite" class="text-capitalize" value="">quantite</label>
+                <input type="number" name="nbr" id="quantite" value="">
+                <br>
+                <label for="prix_ht" class="text-capitalize">prix hT</label>
+                <input type="number" name="ht" id="prix_ht"  value="" >
+                <br>
+                <label for="montant" class="text-capitalize">montant</label>
+                <input type="number" name="nbr" id="montant" value=""s>
+                <br>
+                <label for="total_ttc" class="text-capitalize">total tTC</label>
+                <input type="number" name="nbr" id="total_ttc">
+                <br>
+                <input type="button" value="Effacer" id="effacer">
+                <input type="button" value="Calculer" id="calculer">
+
+            </fieldset>
+        </form>
+        
+    </div>
+</body>
+<script src="main.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</html>
