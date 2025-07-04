@@ -16,9 +16,10 @@ La matrice B a pour dimension (N,P) : N étant le nombre de lignes et P étant l
 La matrice C a pour dimension (M,P) : M étant le nombre de lignes et P étant le nombre de colonnes
 */
 public class MatrixProduct_sequentiel {
-    private static final int M=4096;
-    private static final int N=2048;
-    private static final int P=2048;
+   public static final int M = 4096;
+public static final int N = 2048;
+public static final int P = 2048;
+
 //    private static final int M=32;
 //    private static final int N=32;
 //    private static final int P=16;
@@ -69,6 +70,9 @@ public class MatrixProduct_sequentiel {
                 
     }
     
+    public double[][] getResultat() {
+        return C;
+    }
     public static void main(String args[]){
         long startTime = System.currentTimeMillis(); 
         double [][] A= new double[M][N];   

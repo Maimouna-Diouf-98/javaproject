@@ -7,9 +7,15 @@ public class Fibonacci {
         if (n == 1) {
             return 1;
         }
-        long x, y;        
-        x = fibonacci(n - 1);          
-        y = fibonacci(n - 2);      
+        long x, y;  
+        //taskq nthreads=2 MaxDepth=20 if(n >= 20)
+        {
+             //task
+              x = fibonacci(n - 1); 
+              //task         
+              y = fibonacci(n - 2); 
+        }      
+            
         return x + y;
     }
     public static void main(String args[]){
