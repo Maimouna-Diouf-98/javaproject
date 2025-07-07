@@ -92,14 +92,35 @@ public class Fibonacci {
          return x + y ;
       }
    }
-   public static void main ( String args [ ] ) {
-      long startTime = System . currentTimeMillis ( ) ;
-      final int n = 50 ;
-      Fibonacci fib = new Fibonacci ( ) ;
-      long resultat = fib . fibonacci ( n ) ;
-      long stopTime = System . currentTimeMillis ( ) ;
-      long elapsedTime = stopTime - startTime ;
-      System . out . println ( "Fibonacci de " + n + " est de : " + resultat + " Temps d'ex\u00e9cution: " + ( float ) elapsedTime / 1000 + " s" ) ;
-   }
+   public static void main(String[] args) {
+    final int n = 50;
+    final float tempsSeq = 64.4f; // Temps de référence séquentiel
+
+    int[] threadsValues = {2, 4, 6, 8, 10, 12, 20, 30};
+    int[] maxDepthValues = { 1, 2, 4, 6, 8, 10, 12, 14, 16, 18};
+
+    System.out.printf("%-10s %-10s %-15s %-15s%n", "Threads", "MaxDepth", "Temps (s)", "Accélération");
+    System.out.println("-------------------------------------------------------------");
+
+    for (int maxdepth : maxDepthValues) {
+        for (int nthreads : threadsValues) {
+            // Définir les propriétés système pour chaque configuration
+            System.setProperty("fjcomp.threads", String.valueOf(nthreads));
+            System.setProperty("fjcomp.maxdepth", String.valueOf(maxdepth));
+
+            long startTime = System.currentTimeMillis();
+            Fibonacci fib = new Fibonacci();
+            long resultat = fib.fibonacci(n); // Le résultat est toujours le même
+            long stopTime = System.currentTimeMillis();
+
+            float elapsedTime = (float) (stopTime - startTime) / 1000f;
+            float acceleration = tempsSeq / elapsedTime;
+
+            // Affichage arrondi à 1 chiffre après la virgule
+            System.out.printf("%-10d %-10d %-15.1f %-15.1f%n", nthreads, maxdepth, elapsedTime, acceleration);
+        }
+    }
+}
+
 }
  
